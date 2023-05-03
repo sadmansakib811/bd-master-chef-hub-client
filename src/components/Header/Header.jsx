@@ -32,7 +32,7 @@ const Header = () => {
    
   {
                     user ? <>
-                        <span>{user.email}</span>
+                        <span> <img className='rounded-full h-10 w-10 mr-1' src={user.photoURL?user.photoURL:user.email} alt="" /> </span>
                         <button onClick={handleLogOut} className="btn btn-xs">Sign out</button>
                     </> : <Link to="/login">Login </Link>
                 }
