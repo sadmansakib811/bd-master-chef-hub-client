@@ -12,10 +12,13 @@ import AuthProviders from './components/providers/AuthProviders.jsx';
 import Chef from './components/Chef/Chef.jsx';
 import FullRecipe from './components/fullRecipe/FullRecipe.jsx';
 import PrivateRoute from './routes/PrivateRoute.jsx';
+import Blog from './components/Blog/Blog.jsx';
+import ErrorPage from './error-page.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -43,6 +46,10 @@ const router = createBrowserRouter([
         loader:({params})=>fetch(`http://localhost:5000/fullRecipe/${params.id}`),
         
         
+      },
+      {
+        path: '/blog',
+        element: <Blog></Blog>
       }
       
     ],

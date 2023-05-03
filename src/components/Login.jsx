@@ -6,7 +6,7 @@ import { AuthContext } from './providers/AuthProviders';
 const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const { signIn, signInWithGoogle } = useContext(AuthContext);
+    const { signIn, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
     const from = location.state?.from?.pathname || '/';
     
 
@@ -31,6 +31,18 @@ const Login = () => {
     }
 
     const handleGoogleSignIn = () => {
+        signInWithGoogle()
+        .then(result => {
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            navigate(from, {replace: true})
+        })
+        .catch(error => {
+            console.log(error)
+        })
+    }
+
+    const handleGitSignIn = () => {
         signInWithGoogle()
         .then(result => {
             const loggedUser = result.user;
@@ -74,9 +86,12 @@ const Login = () => {
                             New to Auth Master? Please Register
                         </Link>
                     </p>
-                    <div>
+                    <div className='flex mb-2'>
+                        <p className='ms-2 mr-4'>Log in with:  </p>
                     <button onClick={handleGoogleSignIn} className="btn btn-primary">Google</button>
+                    <button onClick={handleGitSignIn} className="btn btn-danger">Github</button>
                     </div>
+                    
                 </div>
             </div>
         </div>

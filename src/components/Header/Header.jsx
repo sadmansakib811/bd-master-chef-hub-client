@@ -17,8 +17,8 @@ const Header = () => {
             {/* navbar start*/}
             <div className="navbar bg-indigo-400">
   <div className="navbar-start">
-   
-    <a className="btn btn-ghost normal-case text-xl text-white">Bd MasterChef Hub</a>
+   <Link to='/'><a className="btn btn-ghost normal-case text-xl text-white">Bd MasterChef Hub</a></Link>
+    
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 text-white">
@@ -34,7 +34,7 @@ const Header = () => {
                     user ? <>
                         <span> <img className='rounded-full h-10 w-10 mr-1' src={user.photoURL?user.photoURL:user.email} alt="" /> </span>
                         <button onClick={handleLogOut} className="btn btn-xs">Sign out</button>
-                    </> : <Link to="/login">Login </Link>
+                    </> : <> <Link to="/login">Login </Link> / <Link to="/register">Register </Link> </> 
                 }
 
   </div>
