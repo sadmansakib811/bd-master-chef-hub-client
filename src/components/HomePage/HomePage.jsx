@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Chefs from '../Chefs/Chefs.jsx'
 const HomePage = () => {
     return (
         <div>
@@ -16,6 +16,8 @@ const HomePage = () => {
   </div>
 </div>
             {/* banner ends here */}
+
+          <Chefs></Chefs>
 
         </div>
     );

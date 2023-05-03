@@ -1,10 +1,17 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../providers/AuthProviders';
  
 
 const Header = () => {
- 
+  const{user, logOut} = useContext(AuthContext);
+  
+  const handleLogOut = () => {
+    logOut()
+        .then(() => { })
+        .catch(error => console.error(error))
+}
     return (
         <div>
             {/* navbar start*/}
@@ -23,7 +30,12 @@ const Header = () => {
   <div className="navbar-end">
   {/* onClick={handleLogout} */}
    
-        {/* {user? <span className='text-white'>welcome {user?.email} <button >SignOut</button></span>  : <span> <Link to='/login'><button>SignIn</button></Link>  </span>} */}
+  {
+                    user ? <>
+                        <span>{user.email}</span>
+                        <button onClick={handleLogOut} className="btn btn-xs">Sign out</button>
+                    </> : <Link to="/login">Login </Link>
+                }
 
   </div>
 </div>

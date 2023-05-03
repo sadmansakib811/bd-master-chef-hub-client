@@ -9,6 +9,7 @@ import Login from './components/Login.jsx';
 
 import Register from './components/Register.jsx';
 import AuthProviders from './components/providers/AuthProviders.jsx';
+import Chef from './components/Chef/Chef.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,7 +27,12 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>
       },
-      
+      {
+        path: '/chef/:id',
+        element: <Chef></Chef>,
+        loader:({params})=>fetch(`http://localhost:5000/chef/${params.id}`)
+        
+      }
       
     ],
   },
