@@ -15,12 +15,7 @@ const Chef = () => {
 {/* recipes data */}
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4'>
 
-            {
-                chefRecipes.map(recipe => <ChefRecipes
-                key={recipe.recipe_id}
-                recipe={recipe}
-                ></ChefRecipes>)
-            }
+           
             </div>
             
         </div>
