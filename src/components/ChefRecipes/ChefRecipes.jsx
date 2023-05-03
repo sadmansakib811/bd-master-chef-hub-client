@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaBeer, FaHeart, FaStar, FaStarHalfAlt } from 'react-icons/fa';
+import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
@@ -15,10 +16,13 @@ const ChefRecipes = ({recipe}) => {
     return (
 
         <div >
+          
           <ToastContainer />
             <div className="card  bg-base-100 shadow-xl">
   <figure className="px-10 pt-10">
+    <LazyLoad threshold={1}>
     <img  src={img} alt="Shoes" className="rounded-xl h-96 w-96" />
+    </LazyLoad>
   </figure>
   <div className="card-body items-center text-center">
     <h2 className="card-title">{name}</h2>
