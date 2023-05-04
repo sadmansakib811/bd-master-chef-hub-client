@@ -17,7 +17,7 @@ const Header = () => {
             {/* navbar start*/}
             <div className="navbar bg-indigo-400">
   <div className="navbar-start">
-   <Link to='/'><a className="btn btn-ghost normal-case text-xl text-white">Bd MasterChef Hub</a></Link>
+   <Link to='/' className="btn btn-ghost normal-case text-xl text-white">Bd MasterChef Hub</Link>
     
   </div>
   <div className="navbar-center hidden lg:flex">

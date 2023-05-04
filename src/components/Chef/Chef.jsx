@@ -13,7 +13,7 @@ const Chef = () => {
     const chefRecipes = useLoaderData();
    const[chefsBio, setChefBio] = useState([]);
    useEffect(()=>{
-    fetch(`http://localhost:5000/chefbio/${id}`)
+    fetch(`https://bd-master-chef-hub-server-sadmansakib811.vercel.app/chefbio/${id}`)
     .then(res=> res.json())
     .then(data=> setChefBio(data))
    },[])

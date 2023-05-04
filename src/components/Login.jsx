@@ -43,7 +43,7 @@ const Login = () => {
     }
 
     const handleGitSignIn = () => {
-        signInWithGoogle()
+        signInWithGitHub()
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser);

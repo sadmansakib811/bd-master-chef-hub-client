@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
-import Chefs from '../Chefs/Chefs.jsx'
+import Chefs from '../Chefs/Chefs.jsx';
+import Marquee from "react-fast-marquee";
 const HomePage = () => {
   const chefsRef = useRef(null);
 
@@ -54,6 +55,43 @@ const HomePage = () => {
     <img src="https://media.istockphoto.com/id/162244500/photo/table-filled-with-freshly-made-indian-food.jpg?s=612x612&w=0&k=20&c=g9-Wz-_wyltAWCaiNM-cI4QoXO_xY4IscCAdvP20Me8=" alt="Burger" />
   </div>
 </div>
+</div>
+{/* 4th section marquee */}
+
+<div>
+<div className=''>
+            <h1 className='text-7xl	mt-6 text-center'>Our Partner Companies:</h1>
+          </div>
+ <Marquee className='' speed="200">
+     
+     <div className="avatar">
+  <div className="w-29 rounded">
+    <img src="https://www.foodpanda.com/wp-content/uploads/2020/04/foodpanda_cover.png" />
+  </div>
+   <div className="w-29 rounded">
+    <img src="https://play-lh.googleusercontent.com/xqwy60XzAgJLHRkO1jqwGgWQ9gB0f5tsBApPl0JAJ75HzneyO__HdnH5_r4_FOoknqHz" />
+  </div>
+
+  <div className="w-29 rounded">
+    <img src="https://play-lh.googleusercontent.com/kDzXydb6ZT4LUj0RiU-GyptnVgCzzk9snN1FVxj2YfqFb4PpRdQRBKzdz4jzUOxAS9-d" />
+  </div>
+
+  <div className="w-29 rounded">
+    <img src="https://www.foodpanda.com/wp-content/uploads/2020/04/foodpanda_cover.png" />
+  </div>
+
+  <div className="w-29 rounded">
+    <img src="https://play-lh.googleusercontent.com/xqwy60XzAgJLHRkO1jqwGgWQ9gB0f5tsBApPl0JAJ75HzneyO__HdnH5_r4_FOoknqHz" />
+  </div>
+  
+  
+</div>
+
+    
+    
+  </Marquee>
+
+
 </div>
 
         </div>

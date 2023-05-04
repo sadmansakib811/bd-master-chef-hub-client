@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       {
         path: '/chef/:id',
         element: <PrivateRoute><Chef></Chef></PrivateRoute> ,
-        loader:({params})=>fetch(`http://localhost:5000/chef/${params.id}`),
+        loader:({params})=>fetch(`https://bd-master-chef-hub-server-sadmansakib811.vercel.app/chef/${params.id}`),
         
         
       },
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
       {
         path: '/fullRecipe/:id',
         element:<PrivateRoute><FullRecipe></FullRecipe></PrivateRoute> ,
-        loader:({params})=>fetch(`http://localhost:5000/fullRecipe/${params.id}`),
+        loader:({params})=>fetch(`https://bd-master-chef-hub-server-sadmansakib811.vercel.app/fullRecipe/${params.id}`),
         
         
       },
